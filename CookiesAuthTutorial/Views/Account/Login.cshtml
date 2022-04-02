@@ -1,0 +1,29 @@
+﻿@model LoginRequest
+
+@{
+    Layout = "";
+    ViewBag.Title = "Login";
+}
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+
+<div class="container">
+    <form asp-controller="Account" asp-action="Login" method="post">
+        
+        <div class="form-group">
+            <label for="Username">Username</label>
+            <input type="text" class="form-control" asp-for="Username" placeholder="Enter Username">
+            <span asp-validation-for="Username" class="alert-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" asp-for="Password" placeholder="Enter Password">
+            <span asp-validation-for="Password" class="alert-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
