@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace CookiesAuthTutorial.Controllers
@@ -22,6 +23,8 @@ namespace CookiesAuthTutorial.Controllers
 
         public IActionResult Index()
         {
+            var name = User.Claims.Where(x => x.Type == ClaimTypes.Name).FirstOrDefault().Value;
+
             return View();
         }
 

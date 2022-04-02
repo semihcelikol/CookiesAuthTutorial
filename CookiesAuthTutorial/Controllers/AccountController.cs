@@ -67,7 +67,7 @@ namespace CookiesAuthTutorial.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("Password", "Kullanıcı adı veya şifre hatalı");
+                    ModelState.AddModelError("Password", "Username or Password wrong !");
                 }
             }
 
